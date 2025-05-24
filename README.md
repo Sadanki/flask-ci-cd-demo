@@ -1,6 +1,4 @@
-Here’s a professional and visually appealing README tailored for your Flask CI/CD project based on the structure and style of the sample you provided:
 
----
 
 # 🚀 Flask CI/CD Demo with GitHub Actions
 
@@ -158,7 +156,6 @@ Configure the following **GitHub Secrets** under your repo settings:
 
 * [Flask Documentation](https://flask.palletsprojects.com/)
 * [GitHub Actions Docs](https://docs.github.com/en/actions)
-* Inspired by [pdevhare1/CI-CD-Pipeline](https://github.com/pdevhare1/CI-CD-Pipeline)
 
 ---
 
@@ -170,4 +167,4 @@ Configure the following **GitHub Secrets** under your repo settings:
 
 ---
 
-Would you like me to add deployment instructions for a specific platform like **Heroku**, **EC2**, or **GitHub Pages (static sites)** based on your project goal?
+
