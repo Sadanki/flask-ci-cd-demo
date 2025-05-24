@@ -147,7 +147,7 @@ Need help adding one? Let me know and I can generate a ready-to-use template for
 ## 📬 Contact
 
 **Author:** Sadanki
-📧 Email: [your.email@example.com](mailto:your.email@example.com)
+📧 Email: [Sadanki190@gmail.com](mailto:your.email@example.com)
 🔗 GitHub: [Sadanki](https://github.com/Sadanki)
 
 ---
