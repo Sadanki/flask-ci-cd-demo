@@ -1,8 +1,11 @@
+Here is your **updated README.md** with the **Deployment Options** section aligned to what you've actually implemented in your repository — i.e., **CI pipeline only (no deployment)**.
 
+---
 
+````markdown
 # 🚀 Flask CI/CD Demo with GitHub Actions
 
-A simple Flask web application integrated with a CI/CD pipeline using **GitHub Actions**. This project demonstrates how to automate testing and deployment of a Python Flask app.
+A simple Flask web application integrated with a CI/CD pipeline using **GitHub Actions**. This project demonstrates how to automate testing of a Python Flask app using GitHub Actions.
 
 ---
 
@@ -17,7 +20,7 @@ flask-ci-cd-demo/
 │   └── workflows/
 │       └── ci-cd.yml    # GitHub Actions workflow for CI/CD
 └── README.md            # Project documentation
-```
+````
 
 ---
 
@@ -26,17 +29,15 @@ flask-ci-cd-demo/
 * **Python 3**
 * **Flask**
 * **GitHub Actions**
-* **Docker** (optional for containerized deployment)
-* **Heroku / AWS / Any server** (deployment target - customize as needed)
 
 ---
 
 ## 🛠️ Features
 
 ✅ Simple Flask Web App
-✅ GitHub Actions CI/CD Pipeline
-✅ Automatic Installation & Testing
-✅ Deployment Ready (can be extended for Heroku, AWS, etc.)
+✅ GitHub Actions CI Pipeline
+✅ Automatic Installation & Test Execution
+🚫 No Deployment Configured (can be extended)
 
 ---
 
@@ -46,8 +47,7 @@ flask-ci-cd-demo/
 graph TD
 A[Code Commit] --> B[GitHub Actions Trigger]
 B --> C[Install Dependencies]
-C --> D[Run Tests]
-D --> E[Deploy to Production]
+C --> D[Run Application/Test]
 ```
 
 ---
@@ -91,10 +91,9 @@ The workflow file `.github/workflows/ci-cd.yml` performs the following:
 * ✅ Trigger on push to `main` or pull requests
 * ⚙️ Set up Python environment
 * 📦 Install dependencies
-* 🧪 Run unit tests
-* 🚀 Deploy step placeholder (customize as needed)
+* 🧪 Run application (test placeholder)
 
-You can customize the `deploy` step to suit your environment (e.g., Heroku CLI, AWS CLI, SSH to EC2, etc.)
+You can enhance this by adding actual unit tests or deployment steps.
 
 ---
 
@@ -111,7 +110,7 @@ def test_home():
     assert b"Hello, World!" in response.data
 ```
 
-Then install `pytest` and include in the GitHub workflow:
+Then install `pytest` and update your workflow:
 
 ```bash
 pip install pytest
@@ -122,33 +121,22 @@ pytest
 
 ## 🚀 Deployment Options
 
-Modify the final step in `.github/workflows/ci-cd.yml` based on your hosting platform:
+This project **currently does not include deployment**. The GitHub Actions pipeline focuses only on:
 
-### 🔸 Deploy to Heroku (example)
+* 🔄 Code Pull/Push Events
+* 📦 Dependency Installation
+* 🧪 Application Run / Test Stub
 
-```yaml
-- name: Deploy to Heroku
-  uses: akhileshns/heroku-deploy@v3.12.12
-  with:
-    heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-    heroku_app_name: "your-app-name"
-    heroku_email: "your-email@example.com"
-```
+You can extend it for deployment to platforms like:
 
----
+* Heroku
+* AWS EC2
+* DockerHub
+* Azure App Services
 
-## 🔐 Secrets Configuration
-
-Configure the following **GitHub Secrets** under your repo settings:
-
-* `HEROKU_API_KEY` – for Heroku deployment
-* Any others depending on your deployment target (e.g., AWS credentials, SSH keys)
+Need help adding one? Let me know and I can generate a ready-to-use template for your target.
 
 ---
-
-## 📸 Screenshot
-
-![Flask App Screenshot](https://via.placeholder.com/800x400.png?text=Hello+World+Flask+App)
 
 ---
 
@@ -166,5 +154,4 @@ Configure the following **GitHub Secrets** under your repo settings:
 🔗 GitHub: [Sadanki](https://github.com/Sadanki)
 
 ---
-
 
