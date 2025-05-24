@@ -1,6 +1,3 @@
-Here is your **updated README.md** with the **Deployment Options** section aligned to what you've actually implemented in your repository — i.e., **CI pipeline only (no deployment)**.
-
----
 
 ````markdown
 # 🚀 Flask CI/CD Demo with GitHub Actions
