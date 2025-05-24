@@ -48,3 +48,17 @@ jobs:
         ssh -o StrictHostKeyChecking=no ${USER}@${HOST} "
           bash /home/ubuntu/flask-app/deploy.sh
         "
+    - name: Send success email
+      if: success()
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 587
+        username: ${{ secrets.SMTP_USERNAME }}
+        password: ${{ secrets.SMTP_PASSWORD }}
+        subject: "GitHub Actions: Flask CI/CD Deployment Succeeded"
+        to: Sadanki190@gmail.com
+        from: github-actions@example.com
+        body: |
+          The Flask CI/CD deployment to staging succeeded.
+          Details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
