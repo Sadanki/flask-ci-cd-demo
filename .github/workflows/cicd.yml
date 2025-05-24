@@ -1,4 +1,3 @@
-
 name: Flask CI/CD Pipeline
 
 on:
@@ -47,9 +46,5 @@ jobs:
       run: |
         echo "Deploying to staging server at ${HOST}"
         ssh -o StrictHostKeyChecking=no ${USER}@${HOST} "
-          cd /home/ubuntu/flask-app && \
-          git fetch origin staging && \
-          git reset --hard origin/staging && \
-          pip install -r requirements.txt && \
-          sudo systemctl restart flask-app
+          bash /home/ubuntu/flask-app/deploy.sh
         "
